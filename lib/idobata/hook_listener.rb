@@ -57,7 +57,7 @@ class IdobataHookListener < Redmine::Hook::Listener
   end
 
   def get_url(obj)
-    Rails.application.routes.url_for(obj.event_url :host => Setting.host_name)
+    Rails.application.routes.url_for(obj.event_url :host => Setting.host_name, :protocol => Setting.protocol))
   end
 
   def truncate(text)
